@@ -18,14 +18,6 @@ public class launchWeb {
         // Setup the Chrome using WebDriverManager
         // WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-
-        // Setup the Firefox using WebDriverManager
-        // WebDriverManager.firefoxdriver().setup();
-        // WebDriver driver = new FirefoxDriver();
-
-        // Setup the Safari using WebDriverManager
-        // SafariOptions options = new SafariOptions();
-        // SafariDriver driver = new SafariDriver(options);
         
         // Open the URL
         driver.get("https://rahulshettyacademy.com/AutomationPractice/");
