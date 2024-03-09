@@ -46,6 +46,11 @@ public class methods {
 		// conditional method
 		// isDisplayed
 		
+		
+		
+		// isEnabled
+		// isSelected
+		
 		// navigation method
 		
 		// browser method
