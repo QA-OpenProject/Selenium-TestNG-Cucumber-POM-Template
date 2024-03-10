@@ -34,6 +34,14 @@ public class dropdownWithoutSelectTag {
 				monthList.get(i).click();
 			}
 		}
+		
+		// Select multiple values from the dropdown
+		for (WebElement month : monthList) {
+			String text = month.getText();
+			if (text.equals("Nov") || text.equals("Jun")) {
+				month.click();
+			}
+		}
 
 	}
 
