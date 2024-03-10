@@ -23,21 +23,18 @@ public class dropdowns {
 		// Select by visible text
 		dropdown.selectByVisibleText("Option2");
 		System.out.println(dropdown.getFirstSelectedOption().getText());
-		/*
-		 * try { Thread.sleep(2000); } catch (InterruptedException e) { // TODO
-		 * Auto-generated catch block e.printStackTrace(); }
-		 */
 		
 		// Select by value
 		dropdown.selectByValue("option3");
 		System.out.println(dropdown.getFirstSelectedOption().getText());
-		/*
-		 * try { Thread.sleep(2000); } catch (InterruptedException e) { // TODO
-		 * Auto-generated catch block e.printStackTrace(); }
-		 */
 		
 		// Find total number of options in dropdown
 		System.out.println("Total number of options in dropdown: " + dropdown.getOptions().size());
+		
+		// Print all options in dropdown
+		for (WebElement option : dropdown.getOptions()) {
+			System.out.println(option.getText());
+		}
 		
 		driver.quit();
         
