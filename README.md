@@ -13,3 +13,5 @@ Admin Login: [nopCommerce](https://admin-demo.nopcommerce.com/login)
 eShop: [eShop](http://www.automationpractice.pl/index.php)
 
 Open Cart: [opencart](https://demo.opencart.com/)
+
+Practice: [Automation Testing Practice](https://testautomationpractice.blogspot.com/)
