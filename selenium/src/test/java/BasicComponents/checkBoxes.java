@@ -19,22 +19,25 @@ public class checkBoxes {
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		
 		// check the checkbox1's status before and after clicking
-		WebElement checkbox1 = driver.findElement(By.id("checkBoxOption1"));
-		System.out.println("Checkbox1 Before clicking: " + checkbox1.isSelected());
-		checkbox1.click();
-		System.out.println("Checkbox1 After clicking: " + checkbox1.isSelected());
+		/*
+		 * WebElement checkbox1 = driver.findElement(By.id("checkBoxOption1"));
+		 * System.out.println("Checkbox1 Before clicking: " + checkbox1.isSelected());
+		 * checkbox1.click(); System.out.println("Checkbox1 After clicking: " +
+		 * checkbox1.isSelected());
+		 */
 		
 		// check the checkbox2's status before and after clicking
-		try {
-			WebElement checkbox2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("checkBoxOption2")));
-			System.out.println("Checkbox2 Before clicking: " + checkbox2.isSelected());
-			checkbox2.click();
-			System.out.println("Checkbox2 After clicking: " + checkbox2.isSelected());
-		} catch (TimeoutException e) {
-			System.out.println("Checkbox2 TimeoutException caught: " + e.getMessage());
-		}
+		/*
+		 * try { WebElement checkbox2 =
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(
+		 * "checkBoxOption2"))); System.out.println("Checkbox2 Before clicking: " +
+		 * checkbox2.isSelected()); checkbox2.click();
+		 * System.out.println("Checkbox2 After clicking: " + checkbox2.isSelected()); }
+		 * catch (TimeoutException e) {
+		 * System.out.println("Checkbox2 TimeoutException caught: " + e.getMessage()); }
+		 */
 		
-		// check total number of checkboxes
+		// check total number of checkboxes with cssSelector and xpath
 		System.out.println("Total number of checkboxes: " + driver.findElements(By.cssSelector("input[type='checkbox']")).size());
 		//System.out.println("Total number of checkboxes: " + driver.findElements(By.xpath("//input[@type='checkbox']")).size());
 		List<WebElement> checkboxes = driver.findElements(By.xpath("//input[@type='checkbox']"));
@@ -43,10 +46,48 @@ public class checkBoxes {
 		// select all the checkboxes
 		// checkboxes.clear();
 		// System.out.println("Cleared the checkboxes");
+		/*
 		for(int i=0; i<checkboxes.size(); i++) {
             checkboxes.get(i).click();
             System.out.println("Checkbox" + (i+1) + " is clicked");
         }
+        */
+		
+		// select last 2 checkboxes
+		/*
+		 * for (int i = checkboxes.size() - 1; i > checkboxes.size() - 3; i--) {
+		 * checkboxes.get(i).click(); System.out.println("Checkbox" + (i + 1) +
+		 * " is clicked"); }
+		 */
+		
+		// select first 2 checkboxes
+		/*
+		 * for (int i = 0; i < 2; i++) { checkboxes.get(i).click();
+		 * System.out.println("Checkbox" + (i + 1) + " is clicked"); }
+		 */
+		
+		// select all the checkboxes
+
+		/*
+		 * for (WebElement checkbox : checkboxes) { checkbox.click();
+		 * System.out.println("Checkbox is clicked"); }
+		 */
+		
+		// unselect all the checkboxes
+		/*
+		 * for (WebElement checkbox : checkboxes) { checkbox.click();
+		 * System.out.println("Checkbox is unselected"); }
+		 */
+		
+		//select all the checkboxes and then unselect all the checkboxes
+		for (WebElement checkbox : checkboxes) {
+			checkbox.click();
+			System.out.println("Checkbox is clicked");
+			if (checkbox.isSelected()) {
+				checkbox.click();
+				System.out.println("Checkbox is unselected");
+			}
+		}
 		
 		driver.quit();
 		
