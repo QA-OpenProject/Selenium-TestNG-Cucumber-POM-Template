@@ -15,3 +15,5 @@ eShop: [eShop](http://www.automationpractice.pl/index.php)
 Open Cart: [opencart](https://demo.opencart.com/)
 
 Practice: [Automation Testing Practice](https://testautomationpractice.blogspot.com/)
+
+Simple ERP: [EA APP](http://eaapp.somee.com/)
